@@ -1,31 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+:root {
+    --main-bg-color: #e2e8f0;
+    --cor-branca: #fff;
+    --azul-da-pagina: #1992d4;
+}
+
+* {
     margin: 0;
     padding: 0;
     height: 100%;
 }
-body{
-    font-family: "Roboto",sans-serif;
+
+body {
+    font-family: "Roboto", sans-serif;
     display: grid;
     grid-template-columns: 12rem 1fr;
-    grid-template-rows: 5rem 1fr auto;
-     grid-template-areas:
+    grid-template-rows: 8rem 1fr auto;
+    grid-template-areas:
         "navbar header"
         "navbar main"
         "navbar main";
 }
-header{
-     grid-area: header;
-    background-color: rgb(255, 255, 0);
-    padding: 1em;
-    position:sticky;
+
+header {
+    grid-area: header;
+    background-color: var(--cor-branca);
+    padding: 0 1em;
+    position: sticky;
     top: 0;
+    display: grid;
+    grid-template-rows: 3rem 5rem;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "area-pesquisa"
+    "area-usuario";
+}
+.area-pesquisa{
+    grid-area: area-pesquisa;
+}
+.area-pesquisa input{
+    width: 60%;
+    height: 4vh;
+    border-radius: 50px;
+    background-color: var(--main-bg-color);
+    margin: 1rem 9rem  1rem 1rem;
+    
+}
+.img-perfil{
+    border-radius: 50px;
+    margin: 0rem 2rem  0rem 2rem;
+}
+
+.area-usuario{
+    grid-area: area-usuario;
 }
 aside {
     grid-area: navbar;
-    background-color: aqua;
+    background-color: var(--azul-da-pagina);
 }
+
 main {
     grid-area: main;
-    background-color: aquamarine;
+    background-color: var(--main-bg-color);
 }
