@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -26,8 +27,9 @@ body {
 header {
     grid-area: header;
     background-color: var(--cor-branca);
-    padding: 0 1em;
+    padding: 0em 1em;
     position: sticky;
+    /* height: 30%; */
     top: 0;
     display: grid;
     grid-template-rows: 3rem 5rem;
@@ -37,6 +39,8 @@ header {
     "area-usuario";
 }
 .area-pesquisa{
+    /* margin-top: 1%; */
+    top: 0;
     grid-area: area-pesquisa;
 }
 .area-pesquisa input{
@@ -44,16 +48,27 @@ header {
     height: 4vh;
     border-radius: 50px;
     background-color: var(--main-bg-color);
-    margin: 1rem 9rem  1rem 1rem;
+    margin: 1rem 8rem  1rem 1rem;
     
 }
 .img-perfil{
     border-radius: 50px;
     margin: 0rem 2rem  0rem 2rem;
+   
+    
+}
+.img-perfil-ausuario{
+    border-radius: 50px;
+    width: 5%;
+    height: auto;
 }
 
 .area-usuario{
     grid-area: area-usuario;
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    gap: 5rem;
 }
 aside {
     grid-area: navbar;
