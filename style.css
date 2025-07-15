@@ -57,18 +57,57 @@ header {
    
     
 }
-.img-perfil-ausuario{
-    border-radius: 50px;
-    width: 5%;
-    height: auto;
+.img-perfil-ausuario {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
 }
 
-.area-usuario{
-    grid-area: area-usuario;
-    display: flex;
-    align-items: center;
-    margin-top: 3%;
-    gap: 5rem;
+.area-usuario {
+  grid-area: area-usuario;
+  display: flex;
+  align-items: center;         /* Alinha verticalmente tudo */
+  justify-content: space-between; /* Separa esquerda e direita */
+  padding: 1.5rem 1rem;
+  height: 100%;
+}
+.area-usuario p {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+
+
+.perfil-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.perfil-info span {
+    font-size: 13px;
+}
+.perfil-info p {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+
+.botoes-usuario {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button-usuario {
+  background-color: var(--azul-da-pagina);
+  color: var(--cor-branca);
+  font-size: 15px;
+  width: 7vw;
+  height: 5vh;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
 }
 aside {
     grid-area: navbar;
