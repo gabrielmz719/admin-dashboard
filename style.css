@@ -1,62 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --main-bg-color: #e2e8f0;
-    --cor-branca: #fff;
-    --azul-da-pagina: #1992d4;
+  --main-bg-color: #e2e8f0;
+  --cor-branca: #fff;
+  --azul-da-pagina: #1992d4;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    display: grid;
-    grid-template-columns: 12rem 1fr;
-    grid-template-rows: 8rem 1fr auto;
-    grid-template-areas:
-        "navbar header"
-        "navbar main"
-        "navbar main";
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  grid-template-rows: 8rem 1fr auto;
+  grid-template-areas:
+    "navbar header"
+    "navbar main";
 }
 
 header {
-    grid-area: header;
-    background-color: var(--cor-branca);
-    padding: 0em 1em;
-    position: sticky;
-    /* height: 30%; */
-    top: 0;
-    display: grid;
-    grid-template-rows: 3rem 5rem;
-    grid-template-columns: auto;
-    grid-template-areas: 
+  grid-area: header;
+  background-color: var(--cor-branca);
+  padding: 0em 1em;
+  position: sticky;
+  /* height: 30%; */
+  top: 0;
+  display: grid;
+  grid-template-rows: 3rem 5rem;
+  grid-template-columns: auto;
+  grid-template-areas:
     "area-pesquisa"
     "area-usuario";
 }
-.area-pesquisa{
-    /* margin-top: 1%; */
-    top: 0;
-    grid-area: area-pesquisa;
+
+.area-pesquisa {
+  /* margin-top: 1%; */
+  top: 0;
+  grid-area: area-pesquisa;
 }
-.area-pesquisa input{
-    width: 60%;
-    height: 4vh;
-    border-radius: 50px;
-    background-color: var(--main-bg-color);
-    margin: 1rem 8rem  1rem 1rem;
-    
+
+.area-pesquisa input {
+  width: 60%;
+  height: 4vh;
+  border-radius: 50px;
+  background-color: var(--main-bg-color);
+  margin: 1rem 8rem 1rem 1rem;
+
 }
-.img-perfil{
-    border-radius: 50px;
-    margin: 0rem 2rem  0rem 2rem;
-   
-    
+
+.img-perfil {
+  border-radius: 50px;
+  margin: 0rem 2rem 0rem 2rem;
+
+
 }
+
 .img-perfil-ausuario {
   border-radius: 50%;
   width: 65px;
@@ -67,11 +70,14 @@ header {
 .area-usuario {
   grid-area: area-usuario;
   display: flex;
-  align-items: center;         /* Alinha verticalmente tudo */
-  justify-content: space-between; /* Separa esquerda e direita */
+  align-items: center;
+  /* Alinha verticalmente tudo */
+  justify-content: space-between;
+  /* Separa esquerda e direita */
   padding: 1.5rem 1rem;
   height: 100%;
 }
+
 .area-usuario p {
   margin: 0;
   line-height: 1.2;
@@ -84,12 +90,14 @@ header {
   align-items: center;
   gap: 1rem;
 }
+
 .perfil-info span {
-    font-size: 13px;
+  font-size: 13px;
 }
+
 .perfil-info p {
-    font-size: 20px;
-    padding-bottom: 20px;
+  font-size: 20px;
+  padding-bottom: 20px;
 }
 
 
@@ -109,12 +117,36 @@ header {
   border: none;
   cursor: pointer;
 }
+
 aside {
-    grid-area: navbar;
-    background-color: var(--azul-da-pagina);
+  grid-area: navbar;
+  background-color: var(--azul-da-pagina);
+  height: 100vh;
+  overflow-y: auto;
+  padding: 1rem 0 0 3rem;
+}
+aside .first-list{
+  list-style: none;
+  height: 7vh;
+  margin: 0 0 16rem 0;
+}
+aside .second-list{
+  list-style: none;
+  height: 7vh;
+  margin: 0 0 50rem 0;
+}
+aside li {
+  margin: 0;
+  padding: 0.5rem 0; /* controle o espaçamento aqui */
+}
+aside a,h1{
+  color: var(--cor-branca);
+}
+aside h1{
+  height: 10vh;
 }
 
 main {
-    grid-area: main;
-    background-color: var(--main-bg-color);
+  grid-area: main;
+  background-color: var(--main-bg-color);
 }
