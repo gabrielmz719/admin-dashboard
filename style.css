@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import './icon.css';
+@import './card.css';
+
 
 :root {
   --main-bg-color: #e2e8f0;
@@ -164,8 +166,8 @@ aside h1 {
 /* aqui vamos deixar o main dapágina funcionando */
 
 main {
-   height: 80vh; 
-  overflow-y: auto; 
+  height: 80vh;
+  overflow-y: auto;
   display: grid;
   grid-template-areas:
     "projects announcements"
@@ -174,27 +176,27 @@ main {
   gap: 1.5rem;
   padding: 1rem;
   box-sizing: border-box;
-  background-color: #f9fafb;
+  background-color: var(--main-bg-color);
 }
 
 .projects {
-  background-color: #1992d4;
+  background-color:var(--main-bg-color);
   grid-area: projects;
   padding: 1.5rem;
   display: grid;
-  width: 66vw;
+  width: 65vw;
 }
 
 .announcements {
   background-color: yellow;
   grid-area: announcements;
   width: 15vw;
-
+  height: 50vh;
 }
 
 .trending {
   background-color: red;
   grid-area: trending;
   width: 15vw;
-
+  height: 50vh;
 }
