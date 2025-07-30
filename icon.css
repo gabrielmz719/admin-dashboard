@@ -1,0 +1,13 @@
+.icon-dashboard {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+    /* usa a mesma cor do texto */
+    margin: 0px 0 -9px 0;
+}
+
+.icon {
+    fill: currentColor;
+    /* usa a mesma cor do texto */
+    margin: 0px 20px -9px 0;
+}

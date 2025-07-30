@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import './icon.css';
 
 :root {
   --main-bg-color: #e2e8f0;
@@ -118,12 +119,20 @@ header {
   cursor: pointer;
 }
 
+.titulo-dashboard {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 0.5rem; /* espaço entre ícone e texto */
+  font-size: 2rem; /* ou o que você quiser pro h1 */
+}
+
 aside {
   grid-area: navbar;
   background-color: var(--azul-da-pagina);
   height: 100vh;
   overflow-y: auto;
-  padding: 1rem 0 0 3rem;
+  padding: 1rem 0 0 1rem;
 }
 aside .first-list{
   list-style: none;
@@ -137,14 +146,16 @@ aside .second-list{
 }
 aside li {
   margin: 0;
-  padding: 0.5rem 0; /* controle o espaçamento aqui */
+  padding: 0.5rem 0; 
 }
 aside a,h1{
   color: var(--cor-branca);
+  text-decoration: none;
 }
 aside h1{
   height: 10vh;
 }
+
 
 main {
   grid-area: main;
