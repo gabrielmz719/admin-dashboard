@@ -24,12 +24,12 @@ body {
     "navbar main";
 }
 
+/* aqui fica os configs do header e area de pesquisa e do usuario */
 header {
   grid-area: header;
   background-color: var(--cor-branca);
   padding: 0em 1em;
   position: sticky;
-  /* height: 30%; */
   top: 0;
   display: grid;
   grid-template-rows: 3rem 5rem;
@@ -40,7 +40,6 @@ header {
 }
 
 .area-pesquisa {
-  /* margin-top: 1%; */
   top: 0;
   grid-area: area-pesquisa;
 }
@@ -122,11 +121,11 @@ header {
 .titulo-dashboard {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  gap: 0.5rem; /* espaço entre ícone e texto */
-  font-size: 2rem; /* ou o que você quiser pro h1 */
+  gap: 0.5rem;
+  font-size: 2rem;
 }
 
+/* Aqui fica todas as configurações do aside e da navbar */
 aside {
   grid-area: navbar;
   background-color: var(--azul-da-pagina);
@@ -134,30 +133,68 @@ aside {
   overflow-y: auto;
   padding: 1rem 0 0 1rem;
 }
-aside .first-list{
+
+aside .first-list {
   list-style: none;
   height: 7vh;
   margin: 0 0 16rem 0;
 }
-aside .second-list{
+
+aside .second-list {
   list-style: none;
   height: 7vh;
   margin: 0 0 50rem 0;
 }
+
 aside li {
   margin: 0;
-  padding: 0.5rem 0; 
+  padding: 0.5rem 0;
 }
-aside a,h1{
+
+aside a,
+h1 {
   color: var(--cor-branca);
   text-decoration: none;
 }
-aside h1{
+
+aside h1 {
   height: 10vh;
 }
 
+/* aqui vamos deixar o main dapágina funcionando */
 
 main {
-  grid-area: main;
-  background-color: var(--main-bg-color);
+   height: 80vh; 
+  overflow-y: auto; 
+  display: grid;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+  grid-template-columns: 3fr 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #f9fafb;
+}
+
+.projects {
+  background-color: #1992d4;
+  grid-area: projects;
+  padding: 1.5rem;
+  display: grid;
+  width: 66vw;
+}
+
+.announcements {
+  background-color: yellow;
+  grid-area: announcements;
+  width: 15vw;
+
+}
+
+.trending {
+  background-color: red;
+  grid-area: trending;
+  width: 15vw;
+
 }
