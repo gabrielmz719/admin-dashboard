@@ -3,6 +3,8 @@
 @import './card.css';
 
 
+
+
 :root {
   --main-bg-color: #e2e8f0;
   --cor-branca: #fff;
@@ -182,21 +184,88 @@ main {
 .projects {
   background-color:var(--main-bg-color);
   grid-area: projects;
-  padding: 1.5rem;
+  padding: 1rem;
   display: grid;
   width: 65vw;
 }
 
 .announcements {
-  background-color: yellow;
+  background-color: var(--main-bg-color);
   grid-area: announcements;
-  width: 15vw;
+  display: grid;
   height: 50vh;
+  width: 15vw;         
+  /* padding: 1rem; */
+  box-sizing: border-box;
+}
+
+.announcement-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 0rem;
+  height: 45vh;
+  width: 16vw;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);;
+  gap: 1rem;
+}
+.announcement-item h4,p{
+  height: 20px;
+
+}
+.item-com-linha {
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
 }
 
 .trending {
-  background-color: red;
+  background-color: var(--main-bg-color);
   grid-area: trending;
-  width: 15vw;
+  display: grid;
   height: 50vh;
+  width: 15vw;         
+  /* padding: 1rem; */
+  box-sizing: border-box;
+}
+
+.trending-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 0rem;
+  height: 50vh;
+  width: 16vw;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);;
+  gap: 1rem;
+}
+
+
+.perfil-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 30px;
+}
+
+.foto-perfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* deixa redondinha */
+  object-fit: cover;   /* ajusta a imagem dentro do círculo */
+}
+
+.info-perfil h4 {
+  margin: 0;
+  font-size: 1rem;
+  height: 2rem;
+}
+
+.info-perfil p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #555;
 }
